@@ -49,7 +49,7 @@ class Levels_decoder:
         for i in range(1, int(len(answer) / 2) + 1):
             answer.pop(i)
             i *= 2
-        answer = list(map(lambda x: chr(ord(x) - random.randint(0, 3)), answer))
+        answer = Levels_decoder(''.join(answer), self.seed).level1()
         return answer
 
     def level3(self):
@@ -57,11 +57,7 @@ class Levels_decoder:
         random.seed(self.seed)
         for i in range(2, int(2 * int(len(answer)) / 3) + 1, 2):
             answer.pop(i)
-
-        for j in range(1, int(len(answer) / 2) + 1):
-            answer.pop(j)
-            j *= 2
-        answer = list(map(lambda x: chr(ord(x) - random.randint(0, 3)), answer))
+        answer = Levels_decoder(''.join(answer), self.seed).level2()
         return answer
 
 
