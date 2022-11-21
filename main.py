@@ -5,7 +5,7 @@ txt = ''
 level = 0
 seed = 1
 while choice != "1" and choice != "2" and not 1 <= level <= 3:
-    choice, txt, seed, level = input("1)Encode\n2)Decode\nchoose :  "), input("enter your message : "), int(
+    choice, txt, seed, level = input("1)Coder\n2)Decoder\nchoose :  "), input("enter your message : "), int(
         input("enter the seed : ")), int(input("enter the level (1-3) : "))
 
 
